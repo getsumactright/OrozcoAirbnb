@@ -1,0 +1,15 @@
+# Static site — nothing to build. Publish the folder as-is.
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/shop"
+  to = "/shop.html"
+  status = 301
+
+[[redirects]]
+  from = "/book"
+  to = "https://www.airbnb.com/rooms/696503088612245611"
+  status = 302
+  force = true

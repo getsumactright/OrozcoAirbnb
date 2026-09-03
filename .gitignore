@@ -1,0 +1,26 @@
+# Internal exploration — not part of the deployable site
+1-parchment.html
+2-neon-harbor.html
+3-sunset-drive.html
+4-pacific-modern.html
+5-gaslamp-gold.html
+6-salt-parchment.html
+7-open-water.html
+8-citrus-coast.html
+builds.html
+
+# 2.2 MB of duplicated base64; regenerate for handoff rather than versioning it
+orozco-house-standalone.html
+
+.DS_Store
+
+# Assets used only by the internal build variants, not by the live site
+assets/beach-cliffs.jpg
+assets/beach-hero.jpg
+assets/beach-wide.jpg
+assets/dusk2.jpg
+assets/facade-wide.jpg
+assets/sky-tall.jpg
+assets/sky-wide.jpg
+assets/sky.jpg
+assets/yard-night.jpg
