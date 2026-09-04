@@ -174,9 +174,23 @@ main > div > section:last-of-type{padding-bottom:var(--gap)}
 /* good to know */
 .gtk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;
      border-top:1.5px solid var(--line)}
-@media(max-width:900px){.gtk{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.gk{padding:26px 26px 26px 0;border-right:1.5px solid var(--line)}
-.gk:last-child{border-right:0}
+/* padding-left is 0 only for the cell that starts a row, so it lines up with the
+   heading; every other cell needs the gutter to clear the divider on its left */
+.gk{padding:26px;border-right:1.5px solid var(--line)}
+.gk:nth-child(4n+1){padding-left:0}
+.gk:nth-child(4n){padding-right:0;border-right:0}
+@media(max-width:900px){
+  .gtk{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gk{padding:26px;border-right:1.5px solid var(--line)}
+  .gk:nth-child(2n+1){padding-left:0}
+  .gk:nth-child(2n){padding-right:0;border-right:0}
+  .gk:nth-child(n+3){border-top:1.5px solid var(--line)}
+}
+@media(max-width:520px){
+  .gtk{grid-template-columns:1fr}
+  .gk{padding:22px 0;border-right:0}
+  .gk:nth-child(n+2){border-top:1.5px solid var(--line)}
+}
 .gk b{display:block;font-family:var(--display);font-size:17px;font-weight:700;margin-bottom:6px}
 .gk span{font-size:15px;color:var(--body);line-height:1.55}
 /* closing */
